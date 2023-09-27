@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Autonomos do Brasil - Pesquisa</title>
+    <style>
+        td {
+            font-size:14px;
+            width:fit-content;
+            padding:5px;
+            border:1px solid;
+        }
+    
+        .close {
+            display:block;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container mx-auto">
+    <div class="bg-gray-50 py-36 px-36">
+        <div class="flex justify-between">
+            <h1 class="text-2xl mb-12">Todos os serviços</h1>
+            <div class="flex gap-4">
+                <a href="index.html">Home</a>
+                <a href="createaccount.html">Adicionar um servico</a>
+            </div>
+        </div>
+        
+        <section class="items">
+            <table id="myTable" class="table-auto w-full font-medium">
+                <thead>
+                    <tr class="text-xs text-gray-500 text-left">
+                        <th class="pb-3 font-medium">ID</th>
+                        <th class="pb-3 font-medium">Nome do usuário</th>
+                        <th class="pb-3 font-medium">E-mail</th>
+                        <th class="pb-3 font-medium">CEP</th>
+                        <th class="pb-3 font-medium">Logradouro</th>
+                        <th class="pb-3 font-medium">Número</th>
+                        <th class="pb-3 font-medium">Bairro</th>
+                        <th class="pb-3 font-medium">Cidade</th>
+                        <th class="pb-3 font-medium">Estado</th>
+                        <th class="pb-3 font-medium">Nome do Serviço</th>
+                        <th class="pb-3 font-medium">Descrição</th>
+                        <th class="pb-3 font-medium">Contato</th>                         
+                </tr>
+            </thead>
+            </table>
+    </section>
+    </div>
+</div>
+
+<script src="scripts.js" ></script>
+</body>
+</html>

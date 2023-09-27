@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Autonomos do Brasil - Crie sua conta</title>
+</head>
+<body>
+    
+
+
+
+  <section class="relative  overflow-hidden">
+    <div class="container  mx-auto">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-wrap -mx-4 items-center">
+          <div class="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
+            <div class="max-w-md mx-auto lg:mx-0">
+              <h3 class="font-heading text-4xl text-gray-900 font-semibold mb-4">Cadastre seu serviço</h3>              
+              <form action="">
+                <div class="mb-5">
+                  <input class="w-full py-3 px-4 text-sm text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-purple-500 focus:outline-purple rounded-lg" type="text" placeholder="Seu nome" id="nome">
+                </div>
+                <div class="mb-5">
+                  <input class="w-full py-3 px-4 text-sm text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-purple-500 focus:outline-purple rounded-lg" type="text" placeholder="E-mail" id="email">
+                </div>
+                <div class="mb-5">
+                  <input class="w-full py-3 px-4 text-sm text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-purple-500 focus:outline-purple rounded-lg" type="number" id="cep" placeholder="CEP" onchange="consultaCep()">
+                  <small id="error"></small>
+                </div>
+                <div class="mb-5">
+                  <input disabled class="mt-1 block w-full py-3 px-4 bg-white border border-slate-300 rounded-lg text-sm shadow-sm placeholder-slate-400
+                  focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+                  invalid:border-pink-500 invalid:text-pink-600
+                  focus:invalid:border-pink-500 focus:invalid:ring-pink-500" type="text" placeholder="Logradouro" id="logradouro">
+                </div>
+                <div class="mb-5 flex gap-2 items-start">                  
+                  <input class="w-full mt-1 py-3 px-4 text-sm text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-purple-500 focus:outline-purple rounded-lg" type="number" placeholder="Número" id="numero">
+                  <input disabled class="mt-1 block w-full py-3 px-4 bg-white border border-slate-300 rounded-lg text-sm shadow-sm placeholder-slate-400
+                  focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+                  invalid:border-pink-500 invalid:text-pink-600
+                  focus:invalid:border-pink-500 focus:invalid:ring-pink-500" type="text" placeholder="Bairro" id="bairro">
+                </div>
+              
+                <div class="mb-5 flex gap-2">
+                  <input disabled class="mt-1 block w-full py-3 px-4 bg-white border border-slate-300 rounded-lg text-sm shadow-sm placeholder-slate-400
+                  focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+                  invalid:border-pink-500 invalid:text-pink-600
+                  focus:invalid:border-pink-500 focus:invalid:ring-pink-500" type="text" placeholder="Cidade" id="cidade">
+
+                  <input disabled class="mt-1 block w-full py-3 px-4 bg-white border border-slate-300 rounded-lg text-sm shadow-sm placeholder-slate-400
+                  focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+                  invalid:border-pink-500 invalid:text-pink-600
+                  focus:invalid:border-pink-500 focus:invalid:ring-pink-500" type="text" placeholder="Estado" id="estado">
+                </div>    
+                <hr>
+                <div class="mb-5 mt-6">                  
+                  <input class="w-full py-3 px-4 text-sm text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-purple-500 focus:outline-purple rounded-lg" type="text" placeholder="Nome do serviço" id="servico">
+                </div>                
+                <div class="mb-5">                  
+                  <textarea class="w-full py-3 px-4 text-sm text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-purple-500 focus:outline-purple rounded-lg" type="text" placeholder="Descrição" id="descricao"></textarea>
+                </div>
+                <div class="mb-5 mt-3">                  
+                  <input class="w-full py-3 px-4 text-sm text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-purple-500 focus:outline-purple rounded-lg" type="tel" placeholder="Contato" id="contato">
+                  <small class="text-gray-500 mt-2 ml-2">Whatsapp, número do telefone, telegram, instagram ou Facebook</small>
+                </div> 
+               
+
+
+                 
+                <button onclick="newItem()" class="relative group block w-full mb-6 py-3 px-5 text-center text-sm font-semibold text-orange-50 bg-orange-600 rounded-full overflow-hidden" type="submit">
+                  <div class="absolute top-0 right-full w-full h-full bg-blue-600 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
+                  <span class="relative">Cadastrar</span>
+                </button>
+                 
+                
+              </form>
+              <a href="servicos.html" class="mt-12 text-2xl text-center block mx-auto w-fit">Ver os serviços</a>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 px-4">
+            <div class="relative max-w-md lg:max-w-2xl mx-auto lg:mr-0">
+              <img class="block h-full w-full" src="images/12.jpg" alt="">
+              <div class="absolute bottom-0 w-full left-0 p-4 lg:px-12 xl:px-20 sm:pb-16">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+<script>
+  function consultaCep(){
+    let cep = document.querySelector('#cep').value;
+   
+    
+    if(cep.length !== 8){
+      document.querySelector('#error').innerHTML = 'CEP Inválido';
+      return;
+    }
+    let url = 'https://viacep.com.br/ws/'+ cep +'/json/';
+
+    fetch(url).then(function(response) {
+       response.json().then(function(data){
+           document.querySelector('#error').innerHTML = '';
+           let logradouro = document.querySelector('#logradouro');
+           let bairro =  document.querySelector('#bairro');
+           let cidade =  document.querySelector('#cidade');
+           let estado =  document.querySelector('#estado');
+           logradouro.value = data.logradouro;
+           bairro.value = data.bairro;
+           cidade.value = data.localidade;
+           estado.value = data.uf;
+       });
+    });
+  }
+</script>
+<script src="scripts.js" ></script>
+</body>
+</html>
